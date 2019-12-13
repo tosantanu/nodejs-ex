@@ -228,9 +228,11 @@ function connectDB() {
   // connect to database
   db.connect((err) => {
      if (err) {
+         console.log('Error in connecting to database - look at log for details');
          throw err;
      }
      console.log('Connected to database');
+     alert('You have been connected to the database');
     });
 }
     
