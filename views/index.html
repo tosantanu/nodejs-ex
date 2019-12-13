@@ -216,6 +216,25 @@ pre {
   <script type="text/javascript">
 function functionOne() { alert('You clicked the top text'); }
 function functionTwo() { alert('You clicked the bottom text'); }
+function connectDB() {
+  const mysql = require('mysql');
+  const db = mysql.createConnection({
+      host: 'custom-mysql.gamification.svc.cluster.local',
+      port: '3306',
+      user: 'xxuser',
+      password: 'welcome1',
+      database: 'sampledb'
+    });
+  // connect to database
+  db.connect((err) => {
+     if (err) {
+         throw err;
+     }
+     console.log('Connected to database');
+    });
+}
+    
+    
   </script>
   
   
@@ -228,6 +247,7 @@ function functionTwo() { alert('You clicked the bottom text'); }
             <h1>This is created for testing</h1>
              <p><a href="#" onClick="functionOne();">Top Text</a></p>
              <p><a href="javascript:functionTwo();">Bottom Text</a></p>
+             <p><a href="javascript:connectDB();">Connect To MYSQL</a></p>
           </hgroup>
 
 
