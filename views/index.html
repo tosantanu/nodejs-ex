@@ -217,6 +217,7 @@ pre {
 function functionOne() { alert('You clicked the top text'); }
 function functionTwo() { alert('You clicked the bottom text'); }
 function connectDB() {
+  alert('You are getting connected to the database');
   const mysql = require('mysql');
   const db = mysql.createConnection({
       host: 'custom-mysql.gamification.svc.cluster.local',
@@ -248,8 +249,8 @@ function connectDB() {
             <h1>Welcome to Gamification First Node JS APP</h1>
             <h1>This is created for testing</h1>
              <p><a href="#" onClick="functionOne();">Top Text</a></p>
-             <p><a href="javascript:functionTwo();">Bottom Text</a></p>
-             <p><a href="javascript:connectDB();">Connect To MYSQL</a></p>
+             <p><a href="#" onClick="functionTwo();">Bottom Text</a></p>
+             <p><a href="#" onClick="connectDB();">Connect To MYSQL</a></p>
           </hgroup>
 
 
