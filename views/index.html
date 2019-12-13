@@ -213,7 +213,24 @@ pre {
 
 </head>
 <body>
-
+ 
+/* Database connection STARTS */
+  
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'custom-mysql.gamification.svc.cluster.local',
+  port: '3306',
+  user: 'xxuser',
+  password: 'welcome1',
+  database: 'sampledb'
+});
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected!');
+});
+  
+/* Database connection ENDS */
+  
 <section class='container'>
           <hgroup>
             <h1>Welcome to Gamification First Node JS APP</h1>
